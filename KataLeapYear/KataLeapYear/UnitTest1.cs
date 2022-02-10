@@ -23,7 +23,8 @@ namespace KataLeapYear {
 
     public static class LeapYear {
         public static bool IsLeap(int year) {
-           return true;
+           if ( year % 400 == 0) return true;
+           return false;
         }
     }
 }
