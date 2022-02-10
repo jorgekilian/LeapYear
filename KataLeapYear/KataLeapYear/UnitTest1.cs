@@ -16,7 +16,7 @@ namespace KataLeapYear {
 
     public static class LeapYear {
         public static bool IsLeap(int year) {
-            throw new System.NotImplementedException();
+            return true;
         }
     }
 }
