@@ -2,9 +2,11 @@ using NUnit.Framework;
 
 namespace KataLeapYear {
     public class LeapYear_Should {
-        [SetUp]
-        public void Setup() {
-        }
+
+        // Los años divisibles por 400 son bisiestos
+        // Los años divisibles por 100 pero no por 400 NO son bisiestos
+        // Los años divisibles por 4 pero no por 100 son bisiestos
+        // Los años no divisibles por 4 NO son bisiestos
 
         [Test]
         public void return_true_when_year_is_divisible_by_400() {
@@ -23,8 +25,7 @@ namespace KataLeapYear {
 
     public static class LeapYear {
         public static bool IsLeap(int year) {
-           if ( year % 400 == 0) return true;
-           return false;
+            return year % 400 == 0;
         }
     }
 }
