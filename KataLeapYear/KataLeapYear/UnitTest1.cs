@@ -12,6 +12,13 @@ namespace KataLeapYear {
 
             Assert.AreEqual(true, result);
         }
+
+        [Test]
+        public void return_false_when_year_is_divisible_by_100_and_not_by_400() {
+            var result = LeapYear.IsLeap(800);
+
+            Assert.AreEqual(false, result);
+        }
     }
 
     public static class LeapYear {
