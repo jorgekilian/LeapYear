@@ -31,7 +31,7 @@ namespace KataLeapYear {
 
         [Test]
         public void return_false_when_year_is_not_divisible_by_4() {
-            var result = LeapYear.IsLeap(4);
+            var result = LeapYear.IsLeap(1);
 
             Assert.AreEqual(false, result);
         }
