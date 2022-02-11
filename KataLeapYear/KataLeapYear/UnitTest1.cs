@@ -10,14 +10,14 @@ namespace KataLeapYear {
 
         [Test]
         public void return_true_when_year_is_divisible_by_400() {
-            var result = LeapYear.IsLeap(800);
+            var result = LeapYear.IsLeap(400);
 
             Assert.AreEqual(true, result);
         }
 
         [Test]
         public void return_false_when_year_is_divisible_by_100_and_not_by_400() {
-            var result = LeapYear.IsLeap(200);
+            var result = LeapYear.IsLeap(100);
 
             Assert.AreEqual(false, result);
         }
@@ -32,7 +32,7 @@ namespace KataLeapYear {
 
     public static class LeapYear {
         public static bool IsLeap(int year) {
-            if ((year % 4) == 0 && (year % 100) != 0) return true;
+            if (year % 4 == 0 && (year % 100) != 0) return true;
             return year % 400 == 0;
         }
     }
