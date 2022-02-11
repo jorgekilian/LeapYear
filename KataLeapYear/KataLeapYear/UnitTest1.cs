@@ -28,6 +28,13 @@ namespace KataLeapYear {
 
             Assert.AreEqual(true, result);
         }
+
+        [Test]
+        public void return_false_when_year_is_not_divisible_by_4() {
+            var result = LeapYear.IsLeap(4);
+
+            Assert.AreEqual(false, result);
+        }
     }
 
     public static class LeapYear {
